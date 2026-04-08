@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<svg width="300" height="200" viewBox="0 0 300 200" >
+    <defs>
+        <filter id="shadow">
+            <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.4"/>
+        </filter>
+
+        <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1" fill="#ffffff"/>
+        </pattern>
+        <clipPath id="canvas">
+            <rect width="300" height="200" />
+        </clipPath>
+    </defs>
+    <rect width="300" height="200" fill="#b1dcf1"/>
+    <g class="bg-stripes" clip-path="url(#canvas)">
+        <g fill="#7dc4e8">
+            <rect x="0" width="20" height="200" />
+            <rect x="40" width="20" height="200" />
+            <rect x="80" width="20" height="200" />
+            <rect x="120" width="20" height="200" />
+            <rect x="160" width="20" height="200" />
+            <rect x="200" width="20" height="200" />
+            <rect x="240" width="20" height="200" />
+            <rect x="280" width="20" height="200" />
+            <rect x="320" width="20" height="200" />
+        </g>
+    </g>
+    <g class="main-text">
+        <text x="152" y="89" text-anchor="middle" font-family="Lobster" font-size="35" fill="#000" opacity="0.2">The Breaking</text>
+        <text x="150" y="87" text-anchor="middle" font-family="Lobster" font-size="35" fill="#f4b400" stroke="#ffffff" stroke-width="1" filter="url(#shadow)">The Breaking</text>
+    </g>
+    <g class="bad-text">
+        <text x="153" y="143" text-anchor="middle" font-family="Lobster" font-size="50" fill="#000" opacity="0.3">Bad</text>
+        <text x="150" y="140" text-anchor="middle" font-family="Lobster" font-size="50" fill="#ff401a" stroke="#ffffff" stroke-width="2" filter="url(#shadow)">Bad</text>
+        <text x="150" y="140" text-anchor="middle" font-family="Lobster" font-size="50" fill="url(#dots)">Bad</text>
+    </g>
+</svg>
+
+    
+</body>
+</html>
