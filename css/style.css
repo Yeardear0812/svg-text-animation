@@ -1,9 +1,115 @@
-
-.bg-stripes {
-    animation: slide 8s linear infinite;
+.bg rect {
+    transform: translateY(-200px); /* Початкова позиція зверху */
+    animation: slide 6s ease-in-out infinite; /* Довга плавна нескінченна анімація */
+}
+.bg rect:nth-child(1) {
+    animation-delay: 0s;
+}
+.bg rect:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.bg rect:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.bg rect:nth-child(4) {
+    animation-delay: 0.9s;
+}
+.bg rect:nth-child(5) {
+    animation-delay: 1.2s;
 }
 
+.bg rect:nth-child(6) {
+    animation-delay: 1.5s;
+}
+
+.bg rect:nth-child(7) {
+    animation-delay: 1.8s;
+}
+
+.bg rect:nth-child(8) {
+    animation-delay: 2.1s;
+}
+.bg rect:nth-child(9){
+    animation-delay: 2.4s;
+}
 @keyframes slide {
-    from { transform: translateX(0); }
-    to { transform: translateX(-20px); }
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    25% {
+        transform: translateY(30px);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(10px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+.text text:nth-child(2) {
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: center;
+    animation: textCycle 8s ease-in-out infinite;
+}
+
+@keyframes textCycle {
+    0%, 35% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    45% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+    55% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+.bad text:nth-child(2),
+.bad text:nth-child(3) {
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: center;
+    animation: badCycle 8s ease-in-out infinite;
+}
+@keyframes badCycle {
+    0%, 45% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
 }
